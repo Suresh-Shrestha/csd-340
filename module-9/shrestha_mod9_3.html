@@ -1,0 +1,81 @@
+<!-- Suresh Shrestha -->
+<!-- 5/8/2026 -->
+<!-- Module 9.3 Assignment -->
+
+ <!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 9.3 for CSD 340 Development with HTML and CSS">
+    <meta name="keywords" content="HTML, CSS, Bellevue University, CSD 340">
+    <meta name="author" content="Suresh Shrestha">
+
+    <link rel="stylesheet" href="shrestha_mod9_3.css">
+
+    <title>CSD 340 Development with HTML and CSS</title>
+
+    <script>
+        var firstWord = "software development";
+        var secondWord = "Omaha";
+        var thirdWord = "family";
+        var fourthWord = "coding";
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        
+        <h2>Module 9.3 Assignment</h2>
+        
+         <p class="intro">
+            My name is Suresh Shrestha, and I am currently pursuing my bachelor’s degree in
+            <span id="word1">__________</span>. I previously completed an associate degree
+            in computer programming at Metropolitan Community College, and I continue to build
+            my knowledge and skills in this field.
+        </p>
+
+        <p>
+            I live in <span id="word2">__________</span>, Nebraska. It is a very peaceful
+            and beautiful place surrounded by nature. It is not very crowded. It is a good
+            place to live.
+        </p>
+
+        <p>
+            I enjoy relaxing, spending time with friends and
+            <span id="word3">__________</span>, watching movies, listening to music, learning
+            new technologies, practicing <span id="word4">__________</span>, and sometimes
+            watching programming-related videos.
+        </p>
+
+        <p>
+            We have four family members. I have two kids and my wife. Both of my kids go to
+            school. We are a happy family.
+        </p>
+
+        <p>
+            <button type="button" onclick="document.getElementById('word1').innerHTML = firstWord">
+                software development
+            </button>
+
+            <button type="button" onclick="document.getElementById('word2').innerHTML = secondWord">
+                Omaha
+            </button>
+
+            <button type="button" onclick="document.getElementById('word3').innerHTML = thirdWord">
+                family
+            </button>
+
+            <button type="button" onclick="document.getElementById('word4').innerHTML = fourthWord">
+                coding
+            </button>
+        </p>
+
+        <hr />
+        <address>
+            <p><a href="https://www.bellevue.edu" target="_blank">Bellevue University</a></p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+    </div>
+</body>
+</html>
