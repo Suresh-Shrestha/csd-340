@@ -1,0 +1,54 @@
+<!-- Suresh Shrestha -->
+<!-- 5/15/2026 -->
+<!-- Module 10.3 Assignment -->
+
+ <!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 10.3 for CSD 340 Development with HTML and CSS">
+    <meta name="keywords" content="HTML, CSS, Bellevue University, CSD 340">
+    <meta name="author" content="Suresh Shrestha">
+
+    <link rel="stylesheet" href="shrestha_mod10_3.css">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById("mainImage");
+            if (image.src.match("nature1")) {
+                image.src = "nature2.jpg";
+                document.getElementById("message").innerHTML = "You clicked the image and it changed to a garden view.";
+            }
+
+            else {
+                image.src = "nature1.jpg";
+                document.getElementById("message").innerHTML = "You clicked the image and it changed to a mountain sunset view.";
+            }
+        }
+    </script>
+
+    </head>
+
+    <body>
+
+        <div id="container">
+            <h1>Assignment 10.3: JavaScript - Part 2</h1>
+            <p>Click the image below to change the picture.</p>
+
+            <img id="mainImage"
+            src="nature1.jpg"
+            alt="Nature Image"
+            onclick="changeImage()">
+
+            <p id="message">
+                The current image is a garden view.
+
+            </p>
+            <br>
+            <a href="../index.html">Back to Landing Page</a>
+
+        </div>
+    </body>
+    </html>
