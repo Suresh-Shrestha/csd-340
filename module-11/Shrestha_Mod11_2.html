@@ -1,0 +1,91 @@
+<!-- Suresh Shrestha -->
+<!-- 5/19/2026 -->
+<!-- Module 11.2 Assignment -->
+
+ <!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 11.2 for CSD 340 Development with HTML and CSS">
+    <meta name="keywords" content="HTML, CSS, Bellevue University, CSD 340">
+    <meta name="author" content="Suresh Shrestha">
+
+    <link rel="stylesheet" href="Shrestha_mod11_2.css">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    </head>
+
+    <body>
+
+      <div id="container">
+
+         <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+         <p>
+
+            Enter a task below, then click "Add" to save it. You can view, delete, or sort entries using the buttons. 
+
+         </p>
+
+         <input type="text" id="taskInput" placeholder="Enter a task">
+
+         <br><br>
+
+         <button onclick="addTask()">Add</button>
+         <button onclick="deleteLastTask()">
+            Delete Last Entry
+         </button>
+
+         <button onclick="sortTasks()">Sort</button>
+         <div id="todoList"></div>
+
+      </div>
+
+      <script>
+
+         let tasks = [];
+         function addTask() {
+            let task = document.getElementById("taskInput").value;
+
+            if (task === "") {
+               alert("Please enter a task.");
+               return;
+
+            }
+
+            tasks.push(task);
+            alert(task + " Was added to the list.");
+            document.getElementById("taskInput").value = "";
+            displayTasks();
+         }
+
+         function deleteLastTask() {
+
+            if (tasks.length === 0) {
+               alert("There are no tasks to delete.");
+               return;
+            }
+
+            let deletedTask = tasks.pop();
+            alert(deletedTask + " Was deleted from the list.");
+            displayTasks();
+         }
+
+         function sortTasks() {
+            tasks.sort();
+            alert("The list has been sorted.");
+            displayTasks();
+         }
+
+         function displayTasks() {
+            let output = "<h3>Things To Do:</h3>";
+            for (let i = 0; i < tasks.length; i++) {
+               output += (i + 1) + ". " + tasks[i] + "<br>";
+
+            }
+
+            document.getElementById("todoList").innerHTML = output;
+         }
+      </script>
+    </body>
+    </html>
